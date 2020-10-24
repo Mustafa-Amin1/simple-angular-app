@@ -22,10 +22,6 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
