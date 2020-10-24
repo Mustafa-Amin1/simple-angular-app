@@ -1,0 +1,25 @@
+.add-employee{
+    position: relative;
+    .form-header{
+        border-bottom: 1px solid rgb(163, 145, 145,.7);
+        width: 100%;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    margin: auto;
+}
+kendo-textbox {
+    margin-bottom: 20px;
+}
+.alert-warning{
+    font-size: 9px;
+}
+.alert-success{
+    position: absolute;
+    top: 0;
+    right: 0;
+}

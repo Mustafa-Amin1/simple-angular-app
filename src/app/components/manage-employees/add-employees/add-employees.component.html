@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="add-employee">
+        <h3 class="text-center form-header pb-3 mb-5"> Add Employee Form</h3>
+        <form [formGroup]="form" id="form">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 ">
+                    <p>Employee Name</p>
+                    <kendo-textbox formControlName="empName" placeholder="Enter Name" [showSuccessIcon]="'initial'"
+                        [showErrorIcon]="'initial'"></kendo-textbox>
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <p>Department </p>
+                    <kendo-dropdownlist [data]="Departments" formControlName="department">
+                    </kendo-dropdownlist>
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <p>Employee Code</p>
+                    <kendo-textbox formControlName="empCode" type="number" placeholder="Enter Code"
+                        [showSuccessIcon]="'initial'" [showErrorIcon]="'initial'"></kendo-textbox>
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <p>Select Birthdate:</p>
+                    <!-- <label> -->
+                    <div class="example-config">
+                    </div>
+                    <kendo-datepicker formControlName="birthDate" [min]="minDate" [max]="maxDate" required>
+                    </kendo-datepicker>
+                    <div *ngIf="form.controls.birthDate.valid == false" class="alert alert-warning" role="alert">
+                        Only values between 1/1/1917 and 12/31/2000 are valid!
+                    </div>
+                    <!-- </label> -->
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+                    <input class="mr-1" type="radio" name="gender" value="Male" #male formControlName="gender" kendoRadioButton />
+                    <label class="k-label mr-3" [for]="male">Male</label>
+
+                    <input  class="mr-1" type="radio" name="gender" value="Female" #female formControlName="gender" kendoRadioButton />
+                    <label class="k-label " [for]="female">Female</label>
+                </div>
+                <div class="k-form-buttons col-md-6 col-sm-12">
+                    <button class="k-button k-primary" (click)="submitForm()">Add Employee</button>
+
+                </div>
+                <div *ngIf="!formStatue" class="alert alert-success" role="alert">
+                    Employee {{form.controls.empName.value}} is added to database
+                </div>
+            </div>
+
+    
+        </form>
+    </div>
+
+</div>

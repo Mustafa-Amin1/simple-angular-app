@@ -1,0 +1,27 @@
+ .footer{
+    position: relative; /* for footer*/
+    height: 100px;
+    margin-top: 50px;
+}
+ .footer .footer-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+ .footer p{
+    margin: 20px;
+    font-size: 15px;
+}
+ .footer p span{
+    color: #FE7E23;
+    font-family:"serif", cursive;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+ .footer p strong{
+    color:rgb(249, 112, 112);
+    font-size: 20px;
+}
