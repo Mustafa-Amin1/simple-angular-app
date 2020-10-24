@@ -7,7 +7,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AddEmployeesComponent } from './components/manage-employees/add-employees/add-employees.component';
@@ -17,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
 

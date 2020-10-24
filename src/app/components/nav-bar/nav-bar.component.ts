@@ -31,7 +31,7 @@ export class NavBarComponent implements OnInit {
       console.log('click');
   }
   constructor() { }
-date;
+  date;
   ngOnInit(): void {
     var today = new Date();   
     this.date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
