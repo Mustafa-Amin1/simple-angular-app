@@ -20,33 +20,29 @@
                 </div>
                 <div class="col-md-6 col-sm-12 ">
                     <p>Select Birthdate:</p>
-                    <!-- <label> -->
-                    <div class="example-config">
-                    </div>
+
                     <kendo-datepicker formControlName="birthDate" [min]="minDate" [max]="maxDate" required>
                     </kendo-datepicker>
                     <div *ngIf="form.controls.birthDate.valid == false" class="alert alert-warning" role="alert">
                         Only values between 1/1/1917 and 12/31/2000 are valid!
                     </div>
-                    <!-- </label> -->
                 </div>
                 <div class="col-md-6 col-sm-12 ">
-                    <input class="mr-1" type="radio" name="gender" value="Male" #male formControlName="gender" kendoRadioButton />
+                    <input class="mr-1" type="radio" name="gender" value="Male" #male formControlName="gender"
+                        kendoRadioButton />
                     <label class="k-label mr-3" [for]="male">Male</label>
 
-                    <input  class="mr-1" type="radio" name="gender" value="Female" #female formControlName="gender" kendoRadioButton />
+                    <input class="mr-1" type="radio" name="gender" value="Female" #female formControlName="gender"
+                        kendoRadioButton />
                     <label class="k-label " [for]="female">Female</label>
                 </div>
                 <div class="k-form-buttons col-md-6 col-sm-12">
                     <button class="k-button k-primary" (click)="submitForm()">Add Employee</button>
-
                 </div>
                 <div *ngIf="!formStatue" class="alert alert-success" role="alert">
                     Employee {{form.controls.empName.value}} is added to database
                 </div>
             </div>
-
-    
         </form>
     </div>
 

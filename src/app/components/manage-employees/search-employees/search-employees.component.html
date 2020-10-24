@@ -15,50 +15,31 @@
                 <div class="k-form-buttons col-md-4 col-sm-12 ">
                     <button class="k-button k-primary" (click)="submitForm()">Search for employee</button>
                     <button class="k-button k-primary" (click)="onClear()">back</button>
-                    
+
                 </div>
             </div>
         </form>
     </div>
     <div id="search-tabel">
-        <kendo-grid
-        [kendoGridBinding]="gridView"
-        kendoGridSelectBy="id"
-        [selectedKeys]="mySelection"
-        [pageSize]="20"
-        [pageable]="true"
-        [sortable]="true"
-        [groupable]="true"
-        [reorderable]="true"
-        [resizable]="true"
-        [height]="480"
-        [columnMenu]="{ filter: true }"
-        (pageChange)="pageChange($event)"
-        [skip]="skip"
-        [data]="gridView"
-        [selectable]="{enabled: true, checkboxOnly: true }"
-        kendoGridSelectBy="empID"
-        [selectedKeys]="mySelection"
-        (selectedKeysChange)="onSelectedKeysChange($event)"
-        [columnMenu]="false"
-        >
-        <kendo-grid-checkbox-column 
-        [width]="50"
-        [headerClass]="{'text-center': true}"
-        [class]="{'text-center': true}">
-            <ng-template kendoGridHeaderTemplate>
-                <input class="k-checkbox" id="selectAllCheckboxId" kendoGridSelectAllCheckbox
-                    [state]="selectAllState"
-                    (selectAllChange)="onSelectAllChange($event)">
-                <label class="k-checkbox-label" for="selectAllCheckboxId"></label>
-            </ng-template>
-        </kendo-grid-checkbox-column>
-        <kendo-grid-column field="empName" title="Employee Name" [width]="200" ></kendo-grid-column>
-        <kendo-grid-column field="empCode" title="Code" [width]="100"></kendo-grid-column>
-        <kendo-grid-column field="department" title="Department" [width]="200"></kendo-grid-column>
-        <kendo-grid-column field="birthDate" title="Birthday" [width]="200"></kendo-grid-column>
-        <kendo-grid-column field="gender" title="Gender" [width]="100"></kendo-grid-column>
+        <kendo-grid [kendoGridBinding]="gridView" kendoGridSelectBy="id" [selectedKeys]="mySelection" [pageSize]="20"
+            [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true" [resizable]="true"
+            [height]="480" [columnMenu]="{ filter: true }" (pageChange)="pageChange($event)" [skip]="skip"
+            [data]="gridView" [selectable]="{enabled: true, checkboxOnly: true }" kendoGridSelectBy="empID"
+            [selectedKeys]="mySelection" (selectedKeysChange)="onSelectedKeysChange($event)" [columnMenu]="false">
+            <kendo-grid-checkbox-column [width]="50" [headerClass]="{'text-center': true}"
+                [class]="{'text-center': true}">
+                <ng-template kendoGridHeaderTemplate>
+                    <input class="k-checkbox" id="selectAllCheckboxId" kendoGridSelectAllCheckbox
+                        [state]="selectAllState" (selectAllChange)="onSelectAllChange($event)">
+                    <label class="k-checkbox-label" for="selectAllCheckboxId"></label>
+                </ng-template>
+            </kendo-grid-checkbox-column>
+            <kendo-grid-column field="empName" title="Employee Name" [width]="200"></kendo-grid-column>
+            <kendo-grid-column field="empCode" title="Code" [width]="100"></kendo-grid-column>
+            <kendo-grid-column field="department" title="Department" [width]="200"></kendo-grid-column>
+            <kendo-grid-column field="birthDate" title="Birthday" [width]="200"></kendo-grid-column>
+            <kendo-grid-column field="gender" title="Gender" [width]="100"></kendo-grid-column>
 
-    </kendo-grid>
+        </kendo-grid>
     </div>
 </div>

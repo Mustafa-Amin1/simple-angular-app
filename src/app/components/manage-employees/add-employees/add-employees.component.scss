@@ -5,21 +5,20 @@
         width: 100%;
     }
 }
-
 form {
     display: flex;
     flex-direction: column;
     width:60%;
     margin: auto;
-}
-kendo-textbox {
-    margin-bottom: 20px;
-}
-.alert-warning{
-    font-size: 9px;
-}
-.alert-success{
-    position: absolute;
-    top: 0;
-    right: 0;
+    kendo-textbox {
+        margin-bottom: 20px;
+    }
+    .alert-warning{
+        font-size: 9px;
+    }
+    .alert-success{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
